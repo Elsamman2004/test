@@ -400,6 +400,50 @@ font-size: 15px;
   text-decoration: underline;
 }
 
+#contact {
+  width: 1100px;
+   background-color: #111;
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 4px solid #018066;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+  margin-bottom: 30px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact input, 
+#contact textarea {
+  color: white;
+  margin: 20px;
+  background-color: #111;
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 4px solid #018066;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  font-size: 25px;
+}
+
+#contact button {
+ background-color: #018066;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  font-size: 25px;
+}
+
+#contact button:hover {
+  text-decoration: none;
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.848);
+}
+
 /* Animation */
 .contact-card {
   opacity: 0;
@@ -407,9 +451,7 @@ font-size: 15px;
   animation: fadeInUp 1s forwards;
 }
 
-.contact-card:nth-child(1) { animation-delay: 0.2s; }
-.contact-card:nth-child(2) { animation-delay: 0.4s; }
-.contact-card:nth-child(3) { animation-delay: 0.6s; }
+
 
 @keyframes fadeInUp {
   to {
@@ -489,13 +531,14 @@ footer a:hover {
     transform: translateY(0);
   }
 }
-.project {
+section {
   opacity: 0;
   transform: translateY(50px);
-  animation: fadeInUp 1s forwards;
+  transition: all 0.6s ease-out;
 }
 
-.project:nth-child(1) { animation-delay: 0.3s; }
-.project:nth-child(2) { animation-delay: 0.6s; }
-.project:nth-child(3) { animation-delay: 0.9s; }
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
